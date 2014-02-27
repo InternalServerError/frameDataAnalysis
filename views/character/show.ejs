@@ -1,0 +1,11 @@
+<div id="show-character">
+	Character name : <%= character.name %><br />
+	Character Health Points : <%= character.hp %><br />
+	Character stun points : <%= character.stun %><br />
+	<% if(character.fwalkspeed) { %>
+		Character forward walkspeed : <%= character.fwalkspeed %> <br />
+	<% } %>
+	<% if(character.bwalkspeed) { %>
+		Character backward walkspeed : <%= character.bwalkspeed %> <br />
+	<% } %>
+</div>

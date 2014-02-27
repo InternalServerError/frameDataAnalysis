@@ -1,0 +1,43 @@
+<div id="characters-list">
+	<table id="characters-list-tab">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Health points</th>
+				<th>Stun points</th>
+				<th>Forward walkspeed</th>
+				<th>Backward walkspeed</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<% _.each(characters, function(character) { %>
+				<tr data-id="<%= character.id %>" data-model="character" class="characters-list-tab-body-line">
+					<td>
+						<a href="/character/show/<%= character.id %>" class="character-name-cell-link">
+							<%= character.name %>
+						</a>
+					</td>
+					<td><%= character.hp %></td>
+					<td><%= character.stun %></td>
+					<td><% if(character.fwalkspeed) { %> 
+								<%= character.fwalkspeed %>  
+						<% } else { %>
+							&nbsp; 
+						<% } %> 
+					</td>
+					<td><% if(character.bwalkspeed) { %> 
+								<%= character.bwalkspeed %>  
+						<% } else { %>
+							&nbsp; 
+						<% } %> 
+					</td>
+					<td>
+						<input type="hidden" name="characterId" value="<%= character.id %>" id="characterID" />
+						<a href="" id="deleteCharacter"><img src="/images/delete.png" alt="Delete character" /></a>
+					</td>
+				</tr>
+			<% }); %>
+		</tbody>
+	</table>
+</div>

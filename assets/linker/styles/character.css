@@ -1,0 +1,74 @@
+/************************
+
+New character
+
+*************************/
+
+form#form-new-character {
+	width: 400px;
+	margin: 0 auto;
+	margin-top: 50px;
+	border: 2px solid red;
+	text-align: center;
+	background: #F0E68C;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	border-radius: 20px;
+}
+
+form#form-new-character input[type="submit"] {
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+form#form-new-character > div.new_character_error {
+	padding-bottom:10px;
+}
+
+input[type="text"].valid {
+	border: 2px solid green;
+}
+
+input[type="text"].error {
+	border: 2px solid red;
+}
+
+/************************
+
+Character list
+
+*************************/
+
+div#characters-list {
+	width: 600px;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 50px;
+	padding: 50px;
+	border-radius: 20px;
+	border: 1px solid black;
+	background: #B0C4de;
+}
+
+div#characters-list table#characters-list-tab {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+div#characters-list table#characters-list-tab thead > tr > th {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+div#characters-list table#characters-list-tab tbody > tr.characters-list-tab-body-line > td {
+	border: 1px solid gray;
+	border-collapse: collapse;
+	text-align: center;
+	padding: 10px;
+}
+
+div#characters-list table#characters-list-tab tbody > tr.characters-list-tab-body-line > td a.character-name-cell-link {
+	text-decoration: none;
+	font-weight: bold;
+	color: red;
+}

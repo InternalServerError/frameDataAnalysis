@@ -1,0 +1,26 @@
+<form action="/character/create" method="POST" id="form-new-character">
+
+	<% if(flash && flash.error) { %>
+		<ul class="alert alert-success">
+			<% Object.keys(flash.error).forEach(function(error) { %>
+				<li><%- JSON.stringify(flash.error[error]) %></li>
+
+			<% }) %>
+		</ul>
+	<% } %>
+
+	<input type="text" name="name" placeholder="Character name" /><br />
+	<div id="name_validation" class="new_character_error"></div>
+	<input type="text" name="hp" placeholder="Health points" /> <br />
+	<div id="hp_validation" class="new_character_error"></div>
+	<input type="text" name="stun" placeholder="Stun points" /> <br />
+	<div id="stun_validation" class="new_character_error"></div>
+	<input type="text" name="fwalkspeed" placeholder="Forward walkspeed" /><br />
+	<div id="fwalkspeed_validation" class="new_character_error"></div>
+	<input type="text" name="bwalkspeed" placeholder="Backward walkspeed" /><br />
+	<div id="bwalkspeed_validation" class="new_character_error"></div>
+
+	<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+
+	<input type="submit" value="Create character" />
+</form>
