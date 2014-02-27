@@ -1,2 +1,0 @@
-# frameDataAnalysis
-### a Sails application
